@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal academic website of Kenta Yanagiya / 栁谷 健太, Osaka University.">
+  <meta name="author" content="Kenta Yanagiya">
+  <meta property="og:title" content="Kenta Yanagiya / 栁谷 健太">
+  <meta property="og:description" content="Graph signal processing, network analysis, graph sparsification, edge sampling, and network dynamics.">
+  <meta property="og:type" content="website">
+  <title>Kenta Yanagiya / 栁谷 健太</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en-mode">
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Kenta Yanagiya home">
+        <span class="brand-en">Kenta Yanagiya</span>
+        <span class="brand-ja">栁谷 健太</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div id="nav-links" class="nav-links">
+        <a href="#about"><span class="en">About</span><span class="ja">About</span></a>
+        <a href="#research"><span class="en">Research</span><span class="ja">Research</span></a>
+        <a href="#publications"><span class="en">Publications</span><span class="ja">Publications</span></a>
+        <a href="#teaching"><span class="en">Teaching</span><span class="ja">Teaching</span></a>
+        <a href="#awards"><span class="en">Awards</span><span class="ja">Awards</span></a>
+        <a href="#patent"><span class="en">Patent</span><span class="ja">Patent</span></a>
+        <a href="#cv"><span class="en">CV</span><span class="ja">CV</span></a>
+        <a href="#contact"><span class="en">Contact</span><span class="ja">Contact</span></a>
+      </div>
+      <div class="language-switch" aria-label="Language switcher">
+        <button type="button" class="lang-button active" data-lang="en">EN</button>
+        <button type="button" class="lang-button" data-lang="ja">JA</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-text">
+        <p class="eyebrow">Osaka University</p>
+        <h1>Kenta Yanagiya <span>/ 栁谷 健太</span></h1>
+        <p class="title en">Doctoral Student, Department of Electrical, Electronic and Information Engineering, Graduate School of Engineering, Osaka University</p>
+        <p class="title ja">大阪大学 大学院工学研究科 電気電子情報通信工学専攻 博士後期課程</p>
+        <p class="summary en">I study graph signal processing and network analysis, with particular emphasis on sampling and compression methods for edges of graphs.</p>
+        <p class="summary ja">グラフ信号処理とネットワーク解析を基盤として，グラフの辺に対するサンプリングおよび圧縮に関する研究を行っています。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#publications"><span class="en">View publications</span><span class="ja">業績を見る</span></a>
+          <a class="button secondary" href="https://scholar.google.co.jp/citations?user=NOINeDcAAAAJ&hl=ja&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </div>
+      </div>
+      <div class="hero-photo" aria-label="Profile photo placeholder">
+        <img src="assets/yanagiya.png" alt="Profile photo placeholder for Kenta Yanagiya">
+        <p class="photo-note en">Profile photo placeholder</p>
+        <p class="photo-note ja">顔写真は後で差し替え</p>
+      </div>
+    </section>
+
+    <section id="about" class="section card-section">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2><span class="en">About</span><span class="ja">About</span></h2>
+      </div>
+      <div class="card prose">
+        <p class="en">I am a doctoral student in the Department of Electrical, Electronic and Information Engineering, Graduate School of Engineering, Osaka University.</p>
+        <p class="en">My research interests include graph signal processing, network analysis, graph sparsification, edge sampling, and network dynamics. In particular, I study sampling and compression methods for edges of graphs, aiming to develop efficient techniques for representing, analyzing, and simplifying large-scale weighted networks.</p>
+        <p class="ja">私は大阪大学大学院工学研究科電気電子情報通信工学専攻の博士後期課程に在籍しています。</p>
+        <p class="ja">主な研究分野は，グラフ信号処理，ネットワーク解析，グラフスパース化，エッジサンプリング，ネットワークダイナミクスです。特に，グラフの辺に対するサンプリングおよび圧縮に関する研究を行っており，大規模な重み付きネットワークを効率的に表現・解析・簡素化するための手法の構築を目指しています。</p>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Research</p>
+        <h2><span class="en">Research Interests</span><span class="ja">研究分野</span></h2>
+      </div>
+      <div class="tags">
+        <span>Graph Signal Processing</span>
+        <span>Network Analysis</span>
+        <span>Graph Sparsification</span>
+        <span>Edge Sampling</span>
+        <span>Network Dynamics</span>
+      </div>
+      <div class="grid two-column">
+        <article class="card">
+          <h3 class="en">Sampling and compression for edges of graphs</h3>
+          <h3 class="ja">グラフの辺に対するサンプリング・圧縮</h3>
+          <p class="en">I focus on methods that treat edge weights as signals defined over graph-induced structures, enabling efficient sampling, reconstruction, and compression of large-scale weighted networks.</p>
+          <p class="ja">グラフの構造から定まる空間上の信号として辺重みを扱い，大規模な重み付きネットワークに対する効率的なサンプリング，再構成，圧縮を実現する手法を研究しています。</p>
+        </article>
+        <article class="card">
+          <h3 class="en">Network dynamics and graph simplification</h3>
+          <h3 class="ja">ネットワークダイナミクスとグラフ簡素化</h3>
+          <p class="en">I am also interested in how sampling and edge removal strategies affect network dynamics, particularly when networks must be simplified while retaining essential behavior.</p>
+          <p class="ja">ネットワークを簡素化しつつ重要な挙動を保持するために，サンプリングや辺除去がネットワークダイナミクスに与える影響にも関心があります。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section card-section">
+      <div class="section-heading">
+        <p class="eyebrow">Publications</p>
+        <h2><span class="en">Publications</span><span class="ja">研究業績</span></h2>
+      </div>
+
+      <div class="publication-group">
+        <h3><span class="en">Journal Papers</span><span class="ja">雑誌論文</span></h3>
+        <ol class="publication-list">
+          <li>
+            <span class="authors">K. Yanagiya, K. Yamada, Y. Katsuhara, T. Takatani, and Y. Tanaka,</span>
+            <span class="title">“Edge sampling of graphs: Graph signal processing approach with edge smoothness,”</span>
+            <span class="venue">IEEE Transactions on Signal and Information Processing over Networks</span>, vol. 11, pp. 1592–1604, 2025.
+          </li>
+        </ol>
+      </div>
+
+      <div class="publication-group">
+        <h3><span class="en">Under Review</span><span class="ja">投稿中</span></h3>
+        <ol class="publication-list">
+          <li>
+            <span class="authors">K. Yanagiya, J. Hara, H. Higashi, Y. Tanaka, and A. Ortega,</span>
+            <span class="title">“Lossy compression of weighted graph adjacency matrices by transform coding,”</span>
+            under review.
+          </li>
+        </ol>
+      </div>
+
+      <div class="publication-group">
+        <h3><span class="en">International Conferences</span><span class="ja">国際会議</span></h3>
+        <ol class="publication-list">
+          <li>K. Yanagiya, J. Hara, H. Higashi, and Y. Tanaka, “Time-Varying Edge Removal Scheduling for Network-based Epidemic Control,” Proc. ISCIE International Symposium on Stochastic Systems Theory and its Applications, Osaka, Japan, pp. 96–101, Nov. 2025.</li>
+          <li>K. Yanagiya, K. Yamada, Y. Katsuhara, T. Takatani, and Y. Tanaka, “Edge sampling of graphs based on edge smoothness,” Proc. IEEE International Conference on Acoustics, Speech and Signal Processing, Singapore, May 2022.</li>
+          <li>K. Yanagiya, J. Hara, H. Higashi, Y. Tanaka, and A. Ortega, “Lossy compression of adjacency matrices by graph filter banks,” Proc. IEEE International Conference on Acoustics, Speech and Signal Processing, Seoul, Korea, Apr. 2024.</li>
+          <li>K. Yanagiya, H. Higashi, and Y. Tanaka, “Edge Sampling Based on Graph Sampling Theory for Graph Sparsification,” Proc. ASPIRE Workshop, Hiroshima, Japan, Mar. 2024.</li>
+          <li>R. Kaneko, H. Kojima, K. Yanagiya, J. Hara, H. Higashi, and Y. Tanaka, “Multiscale graph construction using non-local cluster features,” Proc. IEEE International Workshop on Machine Learning for Signal Processing, London, UK, Sep. 2024.</li>
+        </ol>
+      </div>
+
+      <div class="publication-group">
+        <h3><span class="en">Domestic Presentations</span><span class="ja">国内研究会</span></h3>
+        <ol class="publication-list ja-list">
+          <li>柳谷健太，山田宏樹，勝原康雄，高谷智哉，田中雄一，“Line グラフ変換とグラフサンプリング定理を用いた辺サンプリング,” 第36回信号処理シンポジウム，オンライン，2021年11月.</li>
+          <li>柳谷健太，原惇也，東広志，田中雄一，“グラフフィルタバンクを用いた隣接行列の非可逆圧縮,” 電子情報通信学会 信号処理研究会，信学技報，vol. 123, no. 152, SIP2023-57, pp. 49–54，大阪，2023年8月.</li>
+          <li>柳谷健太，原惇也，東広志，田中雄一，“Time-Varying Edge Removal Scheduling for Network-based Epidemic Control,” 第40回信号処理シンポジウム，茨城，2025年11月.</li>
+          <li>金子玲菜，原惇也，柳谷健太，小島颯，東広志，田中雄一，“非局所的特徴を用いたマルチスケールグラフの構築,” 電子情報通信学会・映像情報メディア学会年次大会，北海道，2024年8月.</li>
+          <li>金子玲菜，原惇也，柳谷健太，小島颯，東広志，田中雄一，“頂点特徴量を利用した非局所的マルチスケールグラフの構築,” 第39回信号処理シンポジウム，北海道，2024年12月.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="teaching" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Teaching</p>
+        <h2><span class="en">Teaching</span><span class="ja">教育歴</span></h2>
+      </div>
+      <div class="card timeline-card">
+        <div class="timeline-item">
+          <time>2026</time>
+          <div>
+            <h3 class="en">Information Literacy I</h3>
+            <h3 class="ja">情報リテラシーI</h3>
+            <p class="en">Part-time Lecturer, Setsunan University.</p>
+            <p class="ja">摂南大学，非常勤講師，2026年度.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="section card-section">
+      <div class="section-heading">
+        <p class="eyebrow">Awards</p>
+        <h2><span class="en">Awards and Fellowships</span><span class="ja">受賞・採択</span></h2>
+      </div>
+      <div class="card">
+        <ul class="compact-list">
+          <li><span class="en">Signal Processing Young Researcher Award, The 36th Signal Processing Symposium, 2021.</span><span class="ja">第36回信号処理シンポジウム 令和3年度信号処理若手奨励賞，2021年.</span></li>
+          <li><span class="en">Selected for the FY2023 Next-Generation Challenging Researcher Development Project for Promoting Interdisciplinary Research and Social Implementation.</span><span class="ja">令和5年度 学際融合を推進し社会実装を担う次世代挑戦的研究者育成プロジェクト 採択.</span></li>
+          <li><span class="en">JSPS Research Fellowship for Young Scientists, DC2, FY2024.</span><span class="ja">令和6年度 日本学術振興会特別研究員 DC2 採択.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="patent" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Patent</p>
+        <h2><span class="en">Patent</span><span class="ja">特許</span></h2>
+      </div>
+      <article class="card patent-card">
+        <h3 class="en">Edge identification apparatus and edge identification method</h3>
+        <h3 class="ja">エッジ特定装置およびエッジ特定方法</h3>
+        <dl class="details">
+          <div>
+            <dt class="en">Inventors</dt><dt class="ja">発明者</dt>
+            <dd>Yasuo Katsuhara, Tomoya Takatani, Yuichi Tanaka, Kenta Yanagiya, and Koki Yamada</dd>
+          </div>
+          <div>
+            <dt class="en">Applicants</dt><dt class="ja">出願人</dt>
+            <dd>Toyota Motor Corporation and Tokyo University of Agriculture and Technology</dd>
+          </div>
+          <div>
+            <dt class="en">Application No.</dt><dt class="ja">出願番号</dt>
+            <dd>特願2021-181007</dd>
+          </div>
+          <div>
+            <dt class="en">Publication No.</dt><dt class="ja">公開番号</dt>
+            <dd>特開2023-069259</dd>
+          </div>
+          <div>
+            <dt class="en">Patent No.</dt><dt class="ja">登録番号</dt>
+            <dd>特許第7697350号 / JP Patent No. 7697350</dd>
+          </div>
+          <div>
+            <dt class="en">Application year</dt><dt class="ja">出願年</dt>
+            <dd>2021</dd>
+          </div>
+        </dl>
+      </article>
+    </section>
+
+    <section id="cv" class="section card-section">
+      <div class="section-heading">
+        <p class="eyebrow">CV</p>
+        <h2><span class="en">Curriculum Vitae</span><span class="ja">略歴</span></h2>
+      </div>
+      <div class="grid two-column">
+        <div class="card timeline-card">
+          <h3><span class="en">Education</span><span class="ja">学歴</span></h3>
+          <div class="timeline-item">
+            <time>2023–2026</time>
+            <div>
+              <p class="en">Doctoral Program, Department of Electrical, Electronic and Information Engineering, Graduate School of Engineering, Osaka University. Expected completion: Sep. 2026.</p>
+              <p class="ja">大阪大学大学院工学研究科 電気電子情報通信工学専攻 博士後期課程. 2026年9月修了見込.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <time>2021–2023</time>
+            <div>
+              <p class="en">Master’s Program, Department of Bio-Functions and Systems Science, Graduate School of Bio-Applications and Systems Engineering, Tokyo University of Agriculture and Technology.</p>
+              <p class="ja">東京農工大学大学院 生物システム応用科学府 生物機能システム科学専攻 博士前期課程.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <time>2021</time>
+            <div>
+              <p class="en">B.Eng., Faculty of Engineering, Tokyo University of Agriculture and Technology.</p>
+              <p class="ja">東京農工大学 工学部 卒業.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card timeline-card">
+          <h3><span class="en">Employment</span><span class="ja">職歴</span></h3>
+          <div class="timeline-item">
+            <time>2026–</time>
+            <div>
+              <p class="en">Part-time Lecturer, Setsunan University.</p>
+              <p class="ja">摂南大学 非常勤講師.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2><span class="en">Contact</span><span class="ja">連絡先</span></h2>
+      </div>
+      <div class="card contact-card">
+        <p>Email: <a href="mailto:k_yanagiya@msp-lab.org">k_yanagiya@msp-lab.org</a></p>
+        <p>Google Scholar: <a href="https://scholar.google.co.jp/citations?user=NOINeDcAAAAJ&hl=ja&oi=ao" target="_blank" rel="noopener noreferrer">Kenta Yanagiya</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kenta Yanagiya / 栁谷 健太</p>
+    <p class="last-updated">Last updated: June 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
