@@ -24,6 +24,7 @@ START = "      <!-- PUBLICATIONS:START -->"
 END = "      <!-- PUBLICATIONS:END -->"
 CATEGORIES = ("journal", "international_conference", "domestic")
 STATUSES = ("published", "accepted", "under_review")
+SELF_AUTHORS = frozenset({"K. Yanagiya", "栁谷健太", "柳谷健太", "Kenta Yanagiya"})
 FIELDS = {
     "id", "category", "status", "language", "authors", "title", "venue", "date",
     "volume", "issue", "pages", "article_number", "report_number", "location", "doi",
@@ -159,7 +160,11 @@ def format_date(value, language):
 def render_item(item):
     ja = item["language"] == "ja"
     separator = "，" if ja else ", "
-    authors = item["authors"]
+    authors = [
+        f'<span class="author-self">{escape(author)}</span>'
+        if author.strip() in SELF_AUTHORS else escape(author)
+        for author in item["authors"]
+    ]
     if ja or len(authors) == 1:
         author_text = separator.join(authors)
     elif len(authors) == 2:
@@ -167,8 +172,8 @@ def render_item(item):
     else:
         author_text = ", ".join(authors[:-1]) + ", and " + authors[-1]
     title_end = "”" if ja else ",”"
-    introduction = (f'<span class="authors">{escape(author_text)}</span>{separator}'
-                    f'<span class="title">“{escape(format_title(item["title"]))}{title_end}</span>')
+    introduction = (f'<span class="authors">{author_text}</span>{separator}'
+                    f'<span class="publication-title">“{escape(format_title(item["title"]))}{title_end}</span>')
     pieces = []
     if item.get("venue"):
         venue = item["venue"]
@@ -207,11 +212,10 @@ def render(records):
         if not items:
             continue
         items.sort(key=lambda item: item.get("date", ""), reverse=True)
-        list_class = "publication-list ja-list" if group == "domestic" else "publication-list"
         blocks.append("\n".join([
             '      <div class="publication-group">',
             f'        <h3><span class="en">{en}</span><span class="ja">{ja}</span></h3>',
-            f'        <ol class="{list_class}">',
+            '        <ol class="publication-list">',
             *(render_item(item) for item in items),
             '        </ol>',
             '      </div>',

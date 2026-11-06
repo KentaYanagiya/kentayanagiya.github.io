@@ -74,6 +74,8 @@ python3 scripts/publications.py add-doi '10.xxxx/xxxxx' --update yanagiya-transf
 
 国際会議論文は `“Title,” in Proc. Conference Name, ...` の形式で表示します。`venue` には `Proc. ...` などの掲載先名だけを入力し、`in` は生成処理で補います。英語の書誌情報では題名の直後のカンマを閉じ引用符の内側に置きます。
 
+書誌情報のフォント、サイズ、太さ、色、行間は全項目で統一し、題名の太字や掲載先の斜体は使用しません。著者名の `K. Yanagiya`、`栁谷健太`、`柳谷健太` にだけ下線を付けます。DOIから取得するフルネームの `Kenta Yanagiya` も同じ対象です。下線はHTML生成時に付けるため、JSONの著者名に装飾を入力する必要はありません。
+
 ローカルでJSONを編集した後は、次のコマンドでHTMLを更新・確認します。
 
 ```sh
