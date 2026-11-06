@@ -1,0 +1,193 @@
+{
+  "date": "2026-11-06",
+  "source_unchanged": true,
+  "results": [
+    {
+      "id": "yanagiya-2025-sssa",
+      "doi": "10.5687/sss.2026.96",
+      "expected_category": "international_conference",
+      "default_exit_code": 0,
+      "stderr": "業績データと index.html を更新しました。",
+      "record": {
+        "id": "doi-10-5687-sss-2026-96",
+        "category": "journal",
+        "status": "published",
+        "language": "en",
+        "authors": [
+          "Kenta Yanagiya",
+          "Junya Hara",
+          "Hiroshi Higashi",
+          "Yuichi Tanaka"
+        ],
+        "title": "Time-Varying Edge Removal Scheduling for Network-based Epidemic Control",
+        "venue": "Proceedings of the ISCIE International Symposium on Stochastic Systems Theory and its Applications",
+        "doi": "10.5687/sss.2026.96",
+        "date": "2025-11-05",
+        "volume": "2026",
+        "issue": "0",
+        "pages": "96-101"
+      },
+      "category_matches": false,
+      "check_exit_code": 0,
+      "check_output": "OK: 1件の業績データとHTMLが一致しています。",
+      "override_exit_code": 0,
+      "override_stderr": "プレビューのみ。ファイルは変更していません。",
+      "override_record": {
+        "language": "en",
+        "id": "doi-10-5687-sss-2026-96",
+        "category": "international_conference",
+        "status": "published",
+        "authors": [
+          "Kenta Yanagiya",
+          "Junya Hara",
+          "Hiroshi Higashi",
+          "Yuichi Tanaka"
+        ],
+        "title": "Time-Varying Edge Removal Scheduling for Network-based Epidemic Control",
+        "venue": "Proceedings of the ISCIE International Symposium on Stochastic Systems Theory and its Applications",
+        "doi": "10.5687/sss.2026.96",
+        "date": "2025-11-05",
+        "volume": "2026",
+        "issue": "0",
+        "pages": "96-101"
+      },
+      "duplicate_exit_code": 0,
+      "duplicate_message": "プレビューのみ。ファイルは変更していません。"
+    },
+    {
+      "id": "yanagiya-2022-icassp",
+      "doi": "10.1109/ICASSP43922.2022.9747724",
+      "expected_category": "international_conference",
+      "default_exit_code": 0,
+      "stderr": "業績データと index.html を更新しました。",
+      "record": {
+        "id": "doi-10-1109-icassp43922-2022-9747724",
+        "category": "international_conference",
+        "status": "published",
+        "language": "en",
+        "authors": [
+          "Kenta Yanagiya",
+          "Koki Yamada",
+          "Yasuo Katsuhara",
+          "Tomoya Takatani",
+          "Yuichi Tanaka"
+        ],
+        "title": "Edge Sampling of Graphs Based on Edge Smoothness",
+        "venue": "ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "doi": "10.1109/icassp43922.2022.9747724",
+        "date": "2022-05-23",
+        "pages": "5932-5936"
+      },
+      "category_matches": true,
+      "check_exit_code": 0,
+      "check_output": "OK: 1件の業績データとHTMLが一致しています。",
+      "duplicate_exit_code": 1,
+      "duplicate_message": "エラー: 登録済みの業績です: yanagiya-2022-icassp。更新する場合は --update yanagiya-2022-icassp を指定してください。"
+    },
+    {
+      "id": "yanagiya-2024-icassp",
+      "doi": "10.1109/ICASSP48485.2024.10448045",
+      "expected_category": "international_conference",
+      "default_exit_code": 0,
+      "stderr": "業績データと index.html を更新しました。",
+      "record": {
+        "id": "doi-10-1109-icassp48485-2024-10448045",
+        "category": "international_conference",
+        "status": "published",
+        "language": "en",
+        "authors": [
+          "Kenta Yanagiya",
+          "Junya Hara",
+          "Hiroshi Higashi",
+          "Yuichi Tanaka",
+          "Antonio Ortega"
+        ],
+        "title": "Lossy Compression of Adjacency Matrices by Graph Filter Banks",
+        "venue": "ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "doi": "10.1109/icassp48485.2024.10448045",
+        "date": "2024-04-14",
+        "pages": "9386-9390"
+      },
+      "category_matches": true,
+      "check_exit_code": 0,
+      "check_output": "OK: 1件の業績データとHTMLが一致しています。",
+      "duplicate_exit_code": 1,
+      "duplicate_message": "エラー: Crossrefへの接続に失敗しました (HTTP 429)。再試行してください。"
+    },
+    {
+      "id": "yanagiya-2024-aspire",
+      "doi": "10.34385/proc.80.P-16",
+      "expected_category": "international_conference",
+      "default_exit_code": 1,
+      "stderr": "エラー: CrossrefにDOIが見つかりません。未登録の業績はJSONへ手動で追加できます。",
+      "retry_attempts": [
+        {
+          "exit_code": 1,
+          "stderr": "エラー: CrossrefにDOIが見つかりません。未登録の業績はJSONへ手動で追加できます。"
+        }
+      ]
+    },
+    {
+      "id": "kaneko-2024-mlsp",
+      "doi": "10.1109/MLSP58920.2024.10734767",
+      "expected_category": "international_conference",
+      "default_exit_code": 0,
+      "stderr": "業績データと index.html を更新しました。",
+      "record": {
+        "id": "doi-10-1109-mlsp58920-2024-10734767",
+        "category": "international_conference",
+        "status": "published",
+        "language": "en",
+        "authors": [
+          "Reina Kaneko",
+          "Hayate Kojima",
+          "Kenta Yanagiya",
+          "Junya Hara",
+          "Hiroshi Higashi",
+          "Yuichi Tanaka"
+        ],
+        "title": "Multiscale Graph Construction Using Non-local Cluster Features",
+        "venue": "2024 IEEE 34th International Workshop on Machine Learning for Signal Processing (MLSP)",
+        "doi": "10.1109/mlsp58920.2024.10734767",
+        "date": "2024-09-22",
+        "pages": "1-6"
+      },
+      "category_matches": true,
+      "check_exit_code": 0,
+      "check_output": "OK: 1件の業績データとHTMLが一致しています。",
+      "duplicate_exit_code": 1,
+      "duplicate_message": "エラー: 登録済みの業績です: kaneko-2024-mlsp。更新する場合は --update kaneko-2024-mlsp を指定してください。"
+    },
+    {
+      "id": "yanagiya-2025-edge-sampling",
+      "doi": "10.1109/TSIPN.2025.3639969",
+      "expected_category": "journal",
+      "default_exit_code": 0,
+      "stderr": "業績データと index.html を更新しました。",
+      "record": {
+        "id": "doi-10-1109-tsipn-2025-3639969",
+        "category": "journal",
+        "status": "published",
+        "language": "en",
+        "authors": [
+          "Kenta Yanagiya",
+          "Koki Yamada",
+          "Yasuo Katsuhara",
+          "Tomoya Takatani",
+          "Yuichi Tanaka"
+        ],
+        "title": "Edge Sampling of Graphs: Graph Signal Processing Approach with Edge Smoothness",
+        "venue": "IEEE Transactions on Signal and Information Processing over Networks",
+        "doi": "10.1109/tsipn.2025.3639969",
+        "date": "2025",
+        "volume": "11",
+        "pages": "1592-1604"
+      },
+      "category_matches": true,
+      "check_exit_code": 0,
+      "check_output": "OK: 1件の業績データとHTMLが一致しています。",
+      "duplicate_exit_code": 1,
+      "duplicate_message": "エラー: 登録済みの業績です: yanagiya-2025-edge-sampling。更新する場合は --update yanagiya-2025-edge-sampling を指定してください。"
+    }
+  ]
+}

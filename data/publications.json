@@ -133,5 +133,34 @@
     "venue": "第39回信号処理シンポジウム",
     "date": "2024-12",
     "location": "北海道"
+  },
+  {
+    "id": "kaneko-2026-laputa",
+    "category": "domestic",
+    "status": "published",
+    "language": "ja",
+    "authors": ["金子玲菜", "柳谷健太", "原惇也", "東広志", "田中雄一"],
+    "title": "LAPUTA: ユークリッド距離行列の修復を用いた分散型センサ位置推定",
+    "venue": "電子情報通信学会信号処理研究会，信学技報",
+    "date": "2026-06",
+    "volume": "126",
+    "issue": "157",
+    "report_number": "RCS2026-72",
+    "pages": "261–266",
+    "location": "大阪"
+  },
+  {
+    "id": "kurata-2026-kalmannet",
+    "category": "domestic",
+    "status": "published",
+    "language": "ja",
+    "authors": ["倉田空", "柳谷健太", "原惇也", "東広志", "田中雄一"],
+    "title": "時変有向グラフを利用したKalmanNetによる配水ネットワーク内の水圧推定",
+    "venue": "電子情報通信学会信号処理研究会，信学技報",
+    "date": "2026-08",
+    "volume": "126",
+    "issue": "157",
+    "report_number": "SIP2026-41",
+    "pages": "27–32"
   }
 ]
