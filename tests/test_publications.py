@@ -66,7 +66,7 @@ class PublicationsTest(unittest.TestCase):
         self.assertNotIn("<script>", output)
         self.assertNotIn("<img", output)
         self.assertNotIn("<iframe", output)
-        self.assertIn("&lt;script&gt;", output)
+        self.assertIn("&lt;script&gt;", output.lower())
         self.assertIn("https://doi.org/10.1234/test%22%3Cimg%3E", output)
 
     def test_invalid_data_does_not_silently_drop_records(self):
@@ -90,10 +90,38 @@ class PublicationsTest(unittest.TestCase):
     def test_metadata_uses_publication_date_and_cleans_markup(self):
         record = self.imported()
         self.assertEqual(record["date"], "2026-10")
-        self.assertEqual(record["title"], "Sampling edges & networks")
+        self.assertEqual(record["title"], "Sampling Edges & Networks")
         self.assertEqual(record["authors"], ["Kenta Yanagiya", "Research Group"])
         self.assertEqual(record["category"], "journal")
         self.assertEqual(record["pages"], "1-10")
+
+    def test_english_titles_follow_the_requested_case_and_hyphenation(self):
+        cases = {
+            "time-varying edge removal scheduling for network-based epidemic control":
+                "Time-Varying Edge Removal Scheduling for Network-based Epidemic Control",
+            "Edge sampling of graphs: Graph signal processing approach with edge smoothness":
+                "Edge Sampling of Graphs: Graph Signal Processing Approach with Edge Smoothness",
+            "lossy compression of adjacency matrices by graph filter banks":
+                "Lossy Compression of Adjacency Matrices by Graph Filter Banks",
+            "multiscale graph construction using non-local cluster features":
+                "Multiscale Graph Construction Using Non-local Cluster Features",
+            "On graphs: WITH signals FROM networks": "on Graphs: with Signals from Networks",
+            "IEEE methods for GraphSAGE": "IEEE Methods for GraphSAGE",
+            "Line グラフ変換とグラフサンプリング定理を用いた辺サンプリング":
+                "Line グラフ変換とグラフサンプリング定理を用いた辺サンプリング",
+        }
+        for original, expected in cases.items():
+            with self.subTest(title=original):
+                self.assertEqual(pub.format_title(original), expected)
+                self.assertEqual(pub.format_title(expected), expected)
+
+    def test_fully_english_domestic_title_is_formatted_without_changing_venue(self):
+        record = deepcopy(self.records[9])
+        record["title"] = "time-varying edge removal scheduling for network-based epidemic control"
+        record["venue"] = "Example conference for graphs"
+        output = pub.render([record])
+        self.assertIn("Time-Varying Edge Removal Scheduling for Network-based Epidemic Control", output)
+        self.assertIn("Example conference for graphs", output)
 
     def test_incomplete_or_mismatched_metadata_is_rejected(self):
         for field in ("author", "title", "container-title", "published-online"):

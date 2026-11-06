@@ -20,7 +20,7 @@ python3 scripts/publications.py add-doi '10.xxxx/xxxxx'
 
 - Crossrefから著者、題名、掲載先、出版年月、巻号、ページ、DOIを取得します。取得項目は登録状況に依存します。
 - 雑誌論文と会議論文は区分を自動判定します。国内会議などは `--category domestic`、国際会議は `--category international_conference`、雑誌論文は `--category journal` で指定できます。
-- 著者順と題名の大文字・小文字は取得した内容を使用します。著者名の略記、開催地、発表年月などは必要に応じてデータを修正してください。
+- 著者順は取得した内容を使用します。英語タイトルは取り込み時とHTML生成時に各単語の先頭を大文字にし、前置詞は位置によらず小文字に統一します。著者名の略記、開催地、発表年月などは必要に応じてデータを修正してください。
 - 出版年月は冊子版、オンライン版、その他の出版日の順に採用します。会議の開催日とは異なる場合があります。年のみ判明している場合は年のみ保存します。
 - 同じDOI、または同じ区分・題名の登録を検出して停止します。CrossrefにないDOIや必須情報が欠ける場合は、データを手動で追加してください。
 - IDを指定する場合は `--id yanagiya-2026-example`、問い合わせ元を示す場合は `--email your-address@example.com` を付けます。
@@ -69,6 +69,10 @@ python3 scripts/publications.py add-doi '10.xxxx/xxxxx' --update yanagiya-transf
 | 任意項目 | `volume`, `issue`, `pages`, `article_number`, `report_number`, `location`, `doi` |
 
 数値の巻号も `"volume": "11"` のように文字列で指定します。不明な任意項目は省略します。投稿中は業績区分によらず投稿中欄へまとめ、それ以外は区分別・年月の新しい順に表示します。年月が同じ項目はデータ内の順序を維持します。
+
+英語タイトルは `Time-Varying Edge Removal Scheduling for Network-based Epidemic Control` のように表示します。`of`・`on`・`for`・`with`・`by` などの前置詞は小文字、`Time-Varying` は両語の先頭を大文字、`-based` と `Non-local` の後半は小文字にします。略語や固有の綴り（`IEEE`、`GraphSAGE` など）を保持します。日本語を含むタイトル、著者名、雑誌・会議名はこの変換の対象外です。国内発表でもタイトル全体が英語なら適用します。
+
+国際会議論文は `“Title,” in Proc. Conference Name, ...` の形式で表示します。`venue` には `Proc. ...` などの掲載先名だけを入力し、`in` は生成処理で補います。英語の書誌情報では題名の直後のカンマを閉じ引用符の内側に置きます。
 
 ローカルでJSONを編集した後は、次のコマンドでHTMLを更新・確認します。
 

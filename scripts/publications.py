@@ -34,6 +34,44 @@ GROUPS = (
     ("international_conference", "International Conferences", "国際会議"),
     ("domestic", "Domestic Presentations", "国内研究会"),
 )
+PREPOSITIONS = frozenset("""
+    aboard about above across after against along amid amidst among amongst around
+    as at before behind below beneath beside besides between beyond but by
+    concerning considering despite down during except excluding following for
+    from in including inside into like near notwithstanding of off on onto
+    opposite outside over past per regarding round since through throughout
+    till to toward towards under underneath unlike until unto up upon versus
+    via with within without
+""".split())
+
+
+def format_title(title):
+    """Capitalize English titles, retaining prepositions and compound suffixes."""
+    # Domestic records can contain fully English titles; do not use record language.
+    if re.search(r"[\u3040-\u30ff\u3400-\u9fff]", title):
+        return title
+
+    def capitalize_word(word):
+        if word.lower() in PREPOSITIONS:
+            return word.lower()
+        # Preserve scientific abbreviations and names such as IEEE and GraphSAGE.
+        if (word.isupper() and len(word) > 1) or any(char.isupper() for char in word[1:]):
+            return word
+        return word[0].upper() + word[1:].lower()
+
+    def capitalize_compound(match):
+        word = match.group()
+        parts = re.split(r"([-‑])", word)
+        for i in range(0, len(parts), 2):
+            # Examples: Time-Varying, Network-based, Non-local.
+            if i and (parts[i].lower() == "based" or parts[0].lower() == "non"):
+                parts[i] = parts[i].lower()
+            else:
+                parts[i] = capitalize_word(parts[i])
+        return "".join(parts)
+
+    return re.sub(r"[A-Za-z]+(?:['’][A-Za-z]+)*(?:[-‑][A-Za-z]+(?:['’][A-Za-z]+)*)*",
+                  capitalize_compound, title)
 
 
 def normalize_doi(value):
@@ -128,10 +166,17 @@ def render_item(item):
         author_text = " and ".join(authors)
     else:
         author_text = ", ".join(authors[:-1]) + ", and " + authors[-1]
-    pieces = [f'<span class="authors">{escape(author_text)}</span>',
-              f'<span class="title">“{escape(item["title"])}”</span>']
+    title_end = "”" if ja else ",”"
+    introduction = (f'<span class="authors">{escape(author_text)}</span>{separator}'
+                    f'<span class="title">“{escape(format_title(item["title"]))}{title_end}</span>')
+    pieces = []
     if item.get("venue"):
-        pieces.append(f'<span class="venue">{escape(item["venue"])}</span>')
+        venue = item["venue"]
+        prefix = ""
+        if item["category"] == "international_conference":
+            prefix = "in "
+            venue = re.sub(r"^in\s+", "", venue, flags=re.IGNORECASE)
+        pieces.append(f'{prefix}<span class="venue">{escape(venue)}</span>')
     if item.get("location") and not ja:
         pieces.append(escape(item["location"]))
     for field, prefix in (("volume", "vol. "), ("issue", "no. "),
@@ -146,7 +191,7 @@ def render_item(item):
     if item["status"] != "published":
         en, jp = ("accepted", "採択済み") if item["status"] == "accepted" else ("under review", "投稿中")
         pieces.append(f'<span class="en">{en}</span><span class="ja">{jp}</span>')
-    citation = separator.join(pieces) + "."
+    citation = introduction + (separator if ja else " ") + separator.join(pieces) + "."
     if item.get("doi"):
         url = "https://doi.org/" + quote(normalize_doi(item["doi"]), safe="/")
         citation += f' <a href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">DOI</a>'
@@ -257,7 +302,7 @@ def record_from_metadata(metadata, doi, category=None, record_id=None):
         "status": "published",
         "language": "ja" if metadata.get("language", "").startswith("ja") else "en",
         "authors": authors,
-        "title": first_text(metadata.get("title")),
+        "title": format_title(first_text(metadata.get("title"))),
         "venue": first_text(metadata.get("container-title")),
         "doi": doi,
     }

@@ -5,7 +5,7 @@
     "status": "published",
     "language": "en",
     "authors": ["K. Yanagiya", "K. Yamada", "Y. Katsuhara", "T. Takatani", "Y. Tanaka"],
-    "title": "Edge sampling of graphs: Graph signal processing approach with edge smoothness",
+    "title": "Edge Sampling of Graphs: Graph Signal Processing Approach with Edge Smoothness",
     "venue": "IEEE Transactions on Signal and Information Processing over Networks",
     "date": "2025",
     "volume": "11",
@@ -17,7 +17,7 @@
     "status": "under_review",
     "language": "en",
     "authors": ["K. Yanagiya", "J. Hara", "H. Higashi", "Y. Tanaka", "A. Ortega"],
-    "title": "Lossy compression of weighted graph adjacency matrices by transform coding"
+    "title": "Lossy Compression of Weighted Graph Adjacency Matrices by Transform Coding"
   },
   {
     "id": "yanagiya-2025-sssa",
@@ -37,7 +37,7 @@
     "status": "published",
     "language": "en",
     "authors": ["K. Yanagiya", "K. Yamada", "Y. Katsuhara", "T. Takatani", "Y. Tanaka"],
-    "title": "Edge sampling of graphs based on edge smoothness",
+    "title": "Edge Sampling of Graphs Based on Edge Smoothness",
     "venue": "Proc. IEEE International Conference on Acoustics, Speech and Signal Processing",
     "date": "2022-05",
     "location": "Singapore"
@@ -48,7 +48,7 @@
     "status": "published",
     "language": "en",
     "authors": ["K. Yanagiya", "J. Hara", "H. Higashi", "Y. Tanaka", "A. Ortega"],
-    "title": "Lossy compression of adjacency matrices by graph filter banks",
+    "title": "Lossy Compression of Adjacency Matrices by Graph Filter Banks",
     "venue": "Proc. IEEE International Conference on Acoustics, Speech and Signal Processing",
     "date": "2024-04",
     "location": "Seoul, Korea"
@@ -70,7 +70,7 @@
     "status": "published",
     "language": "en",
     "authors": ["R. Kaneko", "H. Kojima", "K. Yanagiya", "J. Hara", "H. Higashi", "Y. Tanaka"],
-    "title": "Multiscale graph construction using non-local cluster features",
+    "title": "Multiscale Graph Construction Using Non-local Cluster Features",
     "venue": "Proc. IEEE International Workshop on Machine Learning for Signal Processing",
     "date": "2024-09",
     "location": "London, UK"

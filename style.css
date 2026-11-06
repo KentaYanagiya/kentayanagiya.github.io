@@ -335,6 +335,7 @@ h3 {
 .publication-list .title {
   display: inline;
   color: var(--text);
+  font-size: inherit;
   font-style: normal;
   font-weight: 650;
 }
