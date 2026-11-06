@@ -1,0 +1,137 @@
+[
+  {
+    "id": "yanagiya-2025-edge-sampling",
+    "category": "journal",
+    "status": "published",
+    "language": "en",
+    "authors": ["K. Yanagiya", "K. Yamada", "Y. Katsuhara", "T. Takatani", "Y. Tanaka"],
+    "title": "Edge sampling of graphs: Graph signal processing approach with edge smoothness",
+    "venue": "IEEE Transactions on Signal and Information Processing over Networks",
+    "date": "2025",
+    "volume": "11",
+    "pages": "1592–1604"
+  },
+  {
+    "id": "yanagiya-transform-coding",
+    "category": "journal",
+    "status": "under_review",
+    "language": "en",
+    "authors": ["K. Yanagiya", "J. Hara", "H. Higashi", "Y. Tanaka", "A. Ortega"],
+    "title": "Lossy compression of weighted graph adjacency matrices by transform coding"
+  },
+  {
+    "id": "yanagiya-2025-sssa",
+    "category": "international_conference",
+    "status": "published",
+    "language": "en",
+    "authors": ["K. Yanagiya", "J. Hara", "H. Higashi", "Y. Tanaka"],
+    "title": "Time-Varying Edge Removal Scheduling for Network-based Epidemic Control",
+    "venue": "Proc. ISCIE International Symposium on Stochastic Systems Theory and its Applications",
+    "date": "2025-11",
+    "location": "Osaka, Japan",
+    "pages": "96–101"
+  },
+  {
+    "id": "yanagiya-2022-icassp",
+    "category": "international_conference",
+    "status": "published",
+    "language": "en",
+    "authors": ["K. Yanagiya", "K. Yamada", "Y. Katsuhara", "T. Takatani", "Y. Tanaka"],
+    "title": "Edge sampling of graphs based on edge smoothness",
+    "venue": "Proc. IEEE International Conference on Acoustics, Speech and Signal Processing",
+    "date": "2022-05",
+    "location": "Singapore"
+  },
+  {
+    "id": "yanagiya-2024-icassp",
+    "category": "international_conference",
+    "status": "published",
+    "language": "en",
+    "authors": ["K. Yanagiya", "J. Hara", "H. Higashi", "Y. Tanaka", "A. Ortega"],
+    "title": "Lossy compression of adjacency matrices by graph filter banks",
+    "venue": "Proc. IEEE International Conference on Acoustics, Speech and Signal Processing",
+    "date": "2024-04",
+    "location": "Seoul, Korea"
+  },
+  {
+    "id": "yanagiya-2024-aspire",
+    "category": "international_conference",
+    "status": "published",
+    "language": "en",
+    "authors": ["K. Yanagiya", "H. Higashi", "Y. Tanaka"],
+    "title": "Edge Sampling Based on Graph Sampling Theory for Graph Sparsification",
+    "venue": "Proc. ASPIRE Workshop",
+    "date": "2024-03",
+    "location": "Hiroshima, Japan"
+  },
+  {
+    "id": "kaneko-2024-mlsp",
+    "category": "international_conference",
+    "status": "published",
+    "language": "en",
+    "authors": ["R. Kaneko", "H. Kojima", "K. Yanagiya", "J. Hara", "H. Higashi", "Y. Tanaka"],
+    "title": "Multiscale graph construction using non-local cluster features",
+    "venue": "Proc. IEEE International Workshop on Machine Learning for Signal Processing",
+    "date": "2024-09",
+    "location": "London, UK"
+  },
+  {
+    "id": "yanagiya-2021-sipsymp",
+    "category": "domestic",
+    "status": "published",
+    "language": "ja",
+    "authors": ["柳谷健太", "山田宏樹", "勝原康雄", "高谷智哉", "田中雄一"],
+    "title": "Line グラフ変換とグラフサンプリング定理を用いた辺サンプリング",
+    "venue": "第36回信号処理シンポジウム",
+    "date": "2021-11",
+    "location": "オンライン"
+  },
+  {
+    "id": "yanagiya-2023-sip",
+    "category": "domestic",
+    "status": "published",
+    "language": "ja",
+    "authors": ["柳谷健太", "原惇也", "東広志", "田中雄一"],
+    "title": "グラフフィルタバンクを用いた隣接行列の非可逆圧縮",
+    "venue": "電子情報通信学会 信号処理研究会，信学技報",
+    "date": "2023-08",
+    "volume": "123",
+    "issue": "152",
+    "report_number": "SIP2023-57",
+    "pages": "49–54",
+    "location": "大阪"
+  },
+  {
+    "id": "yanagiya-2025-sipsymp",
+    "category": "domestic",
+    "status": "published",
+    "language": "ja",
+    "authors": ["柳谷健太", "原惇也", "東広志", "田中雄一"],
+    "title": "Time-Varying Edge Removal Scheduling for Network-based Epidemic Control",
+    "venue": "第40回信号処理シンポジウム",
+    "date": "2025-11",
+    "location": "茨城"
+  },
+  {
+    "id": "kaneko-2024-annual",
+    "category": "domestic",
+    "status": "published",
+    "language": "ja",
+    "authors": ["金子玲菜", "原惇也", "柳谷健太", "小島颯", "東広志", "田中雄一"],
+    "title": "非局所的特徴を用いたマルチスケールグラフの構築",
+    "venue": "電子情報通信学会・映像情報メディア学会年次大会",
+    "date": "2024-08",
+    "location": "北海道"
+  },
+  {
+    "id": "kaneko-2024-sipsymp",
+    "category": "domestic",
+    "status": "published",
+    "language": "ja",
+    "authors": ["金子玲菜", "原惇也", "柳谷健太", "小島颯", "東広志", "田中雄一"],
+    "title": "頂点特徴量を利用した非局所的マルチスケールグラフの構築",
+    "venue": "第39回信号処理シンポジウム",
+    "date": "2024-12",
+    "location": "北海道"
+  }
+]
